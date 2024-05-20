@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "library_online_2024_02",
+    "password": "1452",
+    "database": "library-express-sequelize",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "port": 3306
