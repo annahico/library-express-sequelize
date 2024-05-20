@@ -1,5 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const sequelize = require("./database/db");
+const { Author} =
 dotenv.config();
 
 const app = express();
@@ -61,5 +63,11 @@ app.delete("/api/authors/:id", async (req, res) => {
 
 // server
 app.listen(PORT, () => {
-   console.log(`Server listening on port: ${PORT}`);
+   console.log( `Server listening on port: ${PORT}`);
+});
+
+sequelize.autheticate().then(() => {
+   console.log('Database authenticated');
+}).catch (() => {
+   console.log('Error authenticating database');
 });
