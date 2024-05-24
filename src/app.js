@@ -28,6 +28,7 @@ app.post("/api/authors", async (req, res) => {
    res.status(200).json({
       success: true,
       message: "Author created successfully",
+      data: Autors,
    });
 });
 
