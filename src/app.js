@@ -1,6 +1,5 @@
 const db = require('./database/db');
 
-
 const express = require("express");
 const dotenv = require("dotenv");
 const sequelize = require("./database/db");
@@ -61,13 +60,19 @@ app.put("/api/authors", async (req, res) => {
 
 //detele
 
-//update
-
 app.delete("/api/authors", async (req, res) => {
    res.status(200).json({
       success: true,
       message: "Author deleted successfully",
    });
+});
+
+//CRUD DE BOOKS
+
+//server
+
+app.listen(PORT, () => {
+   console.log(`Server listening on port: ${PORT}`);
 });
 
 // Register API routes
