@@ -1,3 +1,6 @@
+const db = require('./database/db');
+
+
 const express = require("express");
 const dotenv = require("dotenv");
 const sequelize = require("./database/db");
@@ -15,6 +18,55 @@ app.get("/api/healthy", (req, res) => {
    res.status(200).json({
       success: true,
       message: "My APP server is healthy",
+   });
+});
+
+//CRUD DE AUTHORS
+
+//create
+
+app.post("/api/authors", async (req, res) => {
+   res.status(200).json({
+      success: true,
+      message: "Author created successfully",
+   });
+});
+
+//get all
+
+app.get("/api/authors", async (req, res) => {
+   res.status(200).json({
+      success: true,
+      message: "Author retreived successfully",
+   });
+});
+
+// get by id
+
+app.get("/api/authors", async (req, res) => {
+   res.status(200).json({
+      success: true,
+      message: "Author retreived successfully",
+   });
+});
+
+//update
+
+app.put("/api/authors", async (req, res) => {
+   res.status(200).json({
+      success: true,
+      message: "Author updated successfully",
+   });
+});
+
+//detele
+
+//update
+
+app.delete("/api/authors", async (req, res) => {
+   res.status(200).json({
+      success: true,
+      message: "Author deleted successfully",
    });
 });
 
